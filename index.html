@@ -48,7 +48,7 @@
                               
                                  <div>
                                          <!-- Button -->
-                                  <button class="btn btn-soft bg-[#1DD100] text-black py-5 px-8 rounded-md hover:bg-green-600">
+                                  <button id="ticket-buy" onclick="scrollToSection()" class="btn btn-soft bg-[#1DD100] text-black py-5 px-8 rounded-md hover:bg-green-600">
                                         Buy Ticket
                                       </button>
                                  </div>
@@ -116,7 +116,7 @@
                       </section>
                       
                 <!-- ticket processing section -->
-                <section class="p-0 bg-[#F7F8F8] mt-20 pb-20 pt-20 rounded-t-[40px] gap-5" >
+                <section id="seatSelection"  class="p-0 bg-[#F7F8F8] mt-20 pb-20 pt-20 rounded-t-[40px] gap-5" >
                         <!-- font side of the ticket processing -->
                          <!-- ticket title -->
                         <div class="flex flex-col justify-center items-center gap-8">
@@ -144,7 +144,7 @@
                                                 <!-- Seats Left -->
                                                 <div class="flex items-center gap-2">
                                                     <img src="images/seat-green.png" alt="Seat Icon" class="w-5 h-5">
-                                                    <span class="font-semibold text-lg text-[#1DD100]">40 Seats left</span>
+                                                    <span class="font-semibold text-lg text-[#1DD100]"><span id="available-seat">40</span> Seats left</span>
                                                 </div>
                                             </div>
                                         
@@ -223,76 +223,76 @@
                                                         </div>
                                                     <div  id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">A</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A4</button>
+                                                        <button id="A1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A1</button>
+                                                        <button id="A2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A2</button>
+                                                        <button id="A3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A3</button>
+                                                        <button id="A4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">A4</button>
                                                     </div>
                                             
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg  font-medium">B</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B4</button>
+                                                        <button id="B1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B1</button>
+                                                        <button id="B2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B2</button>
+                                                        <button id="B3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B3</button>
+                                                        <button id="B4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">B4</button>
                                                     </div>
                                             
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">C</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C4</button>
+                                                        <button id="C1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C1</button>
+                                                        <button id="C2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C2</button>
+                                                        <button id="C3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C3</button>
+                                                        <button id="C4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">C4</button>
                                                     </div>
                                             
                                                     <div  id="button-id"class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">D</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D4</button>
+                                                        <button id="D1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D1</button>
+                                                        <button id="D2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D2</button>
+                                                        <button id="D3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D3</button>
+                                                        <button id="D4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">D4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">E</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E4</button>
+                                                        <button id="E1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E1</button>
+                                                        <button id="E2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E2</button>
+                                                        <button id="E3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E3</button>
+                                                        <button id="E4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">E4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
-                                                        <button class="text-lg font-medium">F</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F4</button>
+                                                        <button  class="text-lg font-medium">F</button>
+                                                        <button id="F1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F1</button>
+                                                        <button id="F2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F2</button>
+                                                        <button id="F3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F3</button>
+                                                        <button id="F4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">F4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">G</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G4</button>
+                                                        <button id="G1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G1</button>
+                                                        <button id="G2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G2</button>
+                                                        <button id="G3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G3</button>
+                                                        <button id="G4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">G4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">H</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H4</button>
+                                                        <button id="H1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H1</button>
+                                                        <button id="H2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H2</button>
+                                                        <button id="H3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H3</button>
+                                                        <button id="H4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">H4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">I</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I4</button>
+                                                        <button id="I1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I1</button>
+                                                        <button id="I2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I2</button>
+                                                        <button id="I3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I3</button>
+                                                        <button id="I4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">I4</button>
                                                     </div>
                                                     <div id="button-id" class="flex items-center gap-4">
                                                         <button class="text-lg font-medium">J</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J1</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J2</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J3</button>
-                                                        <button class="btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J4</button>
+                                                        <button id="J1" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J1</button>
+                                                        <button id="J2" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J2</button>
+                                                        <button id="J3" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J3</button>
+                                                        <button id="J4" class="btn seat-btn btn-soft bg-[#F7F8F8] px-4 py-2 rounded-lg border">J4</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,7 +312,7 @@
                                                                 </div> 
                                                                 <div class="border-t border-[#03071299] my-4"></div>
                                                           </div>
-                                                          <div class="">
+                                                          <div id="added-seat" class=" ">
                                                                 <div class=" mb-3 flex flex-row justify-between">
                                                                         <p ">C2</p>
                                                                         <p ">Economoy</p>
@@ -368,10 +368,39 @@
 
                 </section>
         </main>
-        <footer>
-            
+        <footer class="bg-[#030712] p-[120px] raleway">
+             <div class="flex flex-row items-center justify-between mb-12">
+                <div class="flex flex-col gap-5">
+                        <h1 class="text-white font-extrabold text-4xl">P-Ticket</h1>
+                        <p class="text-white text-xl mt-5">P-Ticket is a digital platform to make your daily commuting better.</p>
+
+                </div>
+                <div class="gap-5 ">
+                        <h1 class="text-white mb-3 font-semibold text-xl raleway">Download our app</h1>
+                        <div class="btn s bg-[#000000] px-[20px] py-[15px]flex flex-row mt-5"><img src="images/playstore.png" alt="">
+                                <div class=" text-white  flex flex-col">
+                                        <p>Get it on </p>
+                                        <h1>Google Play</h1>
+                                </div>
+                        </div>
+                </div>
+
+             </div>
+             <div class="border-t  border-white my-4 mb-10"></div>
+             <div class="flex flex-row justify-between items-center">
+                <div>
+                        <aside>
+                                <p class="text-[#ffffffB3]"> @all rights reserved, P-Ticket services limited.2024</p>
+                              </aside>
+                </div>
+                <div class="flex flex-row justify-between items-center gap-5">
+                        <a class="text-white font-medium text-[16px]" href="">Terms & condition</a>
+                        <a class="text-white font-medium text-[16px]" href="">Return & refund policy</a>
+                        <a class="text-white font-medium text-[16px]" href="">Privacy policy</a>
+                </div>
+             </div>
         </footer>
 
-    
+    <script src="js/script.js"></script>
 </body>
 </html>
